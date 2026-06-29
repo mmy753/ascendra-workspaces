@@ -34,7 +34,7 @@ export const fetchFleetMetrics = async (): Promise<FleetUtilization> => {
   return mockFleetData;
 };
 
-export const toggleVmStatus = async (vmId: string, action: "start" | "stop"): Promise<VMStatus> => {
+export const toggleVmStatus = async (_vmId: string, action: "start" | "stop"): Promise<VMStatus> => {
   await delay(1000);
   return action === "start" ? "running" : "stopped";
 };
