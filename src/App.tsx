@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { DeveloperView } from './components/DeveloperView';
 import { AdminView } from './components/AdminView';
@@ -12,7 +11,6 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-100 to-indigo-50/30 font-sans text-slate-900 selection:bg-blue-200">
-  {/* Premium Navigation Bar */}
   <nav className="bg-white/70 backdrop-blur-md border-b border-white/80 px-6 py-3 flex justify-between items-center sticky top-0 z-10 shadow-[0_4px_20px_rgb(0,0,0,0.03)]">
           <div className="flex items-center gap-3">
             <div className="bg-blue-600 p-1.5 rounded-lg">
@@ -33,8 +31,6 @@ export default function App() {
             </select>
           </div>
         </nav>
-
-        {/* View Routing */}
         <main className="pb-12">
           {role === "developer" ? <DeveloperView /> : <AdminView />}
         </main>
