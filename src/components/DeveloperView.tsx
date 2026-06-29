@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Play, Square, Terminal, Globe, Cpu, RefreshCw, ChevronDown, ChevronUp } from 'lucide-react';
 import { fetchMyVMs, toggleVmStatus } from '../api/mockApi';
@@ -116,8 +116,7 @@ export const DeveloperView = () => {
                   </div>
                   <div>
                     <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Historical Usage (24h)</h4>
-                    <div className="h-16 flex items-end gap-1 opacity-50">
-                       {/* Mock Sparkline purely with CSS for speed */}
+                    <div className="h-16 flex items-end gap-1 opacity-50">              
                       {[30, 45, 20, 60, 80, 50, 40, 90, 75, 40, 20, 10].map((h, i) => (
                         <div key={i} className="bg-blue-400 w-full rounded-t-sm" style={{ height: `${h}%` }}></div>
                       ))}
